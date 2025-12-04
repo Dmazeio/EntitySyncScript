@@ -1,0 +1,7 @@
+Id,ParentId,Name,Disabled,MyCustomField
+1,0,Unit 1,true,3
+2,0,Unit 2,false,2
+3,4,Unit 3-1,false,32
+4,0,Unit 3,false,2
+5,4,Unit 3-2,false,1
+6,13,Invalid Unit,false,-12

@@ -1,0 +1,20 @@
+{
+  "fieldMappings": {
+    "externalid": {
+      "index": 0,
+      "datatype": "string"
+    },
+    "externalparentid": {
+      "index": 1,
+      "datatype": "string"
+    },
+    "name_nb_no": {
+      "index": 2,
+      "datatype": "string"
+    },
+    "externaldisabled": {
+      "index": 3,
+      "datatype": "boolean"
+    }
+  }
+}
