@@ -12,6 +12,10 @@
       "index": 2,
       "datatype": "string"
     },
+    "name_en_gb": {
+      "index": 2,
+      "datatype": "string"
+    },
     "externaldisabled": {
       "index": 3,
       "datatype": "boolean"

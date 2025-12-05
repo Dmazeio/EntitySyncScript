@@ -43,7 +43,8 @@ The included `config.json` is configured to deal with basic entities. It expects
 | ------ | ----------- | ---- | ------- |
 | ExternalID | This is your source system stable ID of the entity | string | |
 | ExternalParentId | This is your source system stable Parent ID of the entity | string | If the entity is a top-level entity, set this to 0 |
-| name_nb_no | This becomes the name of the entity. | string | The script will for now always save this as the Norwegian name |
+| name_nb_no | This becomes the name of the entity in Norwegian. | string | |
+| name_en_gb | This becomes the name of the entity in English. | string | |
 | ExternalDisabled | If the entity is disabled or not | bool | The following values are considered TRUE: 1, '1', True, 'true', 'True', 'TRUE' |
 
 If you need to add more fields to the entity, just expand the config. Each field is defined with the following shape/structure:
@@ -58,4 +59,4 @@ If you need to add more fields to the entity, just expand the config. Each field
 `index` is the column index in the csv/xlsx file.
 `datatype` is what datatype the value should be read/stored as.
 
-The 4 fields in the default config _must_ be there, or else the script will fail.
+The 5 fields in the default config _must_ be there, or else the script will fail.
