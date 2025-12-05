@@ -1,0 +1,17 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - '*'
+
+jobs:
+  release:
+    runs-on: runs-on=${{ github.run_id }}/runner=ubuntu-24-2cpu-x64/extras=s3-cache
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v5
+      - uses: runs-on/action@v2
+      - name: Create Release
+        uses: ncipollo/release-action@v1
