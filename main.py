@@ -149,6 +149,8 @@ def main():
   if args.entity_type == '':
     logger.error('Entity type is required. Please provide it via --entity-type argument.')
     return
+
+  entity_type = args.entity_type.lower()
   
   HEADERS_GET['x-apikey'] = args.apikey
   HEADERS_PUT['x-apikey'] = args.apikey
@@ -185,14 +187,14 @@ def main():
         logger.warning(f"Unknown datatype for field {field}, treating as string.")
         entity[field] = str(value)
     
-    second_pass = upsert_entity(logger, entity_type=args.entity_type, data=entity)
+    second_pass = upsert_entity(logger, entity_type=entity_type, data=entity)
     if second_pass:
       logger.info(f'Unable to find parent for entity with externalid {entity.get("externalid", "")}, scheduling second update pass')
       second_pass_entities.append(entity)
   
   logger.info(f'Second pass for {len(second_pass_entities)} entities.')
   for entity in second_pass_entities:
-    upsert_entity(logger, entity_type=args.entity_type, data=entity)
+    upsert_entity(logger, entity_type=entity_type, data=entity)
   
 def _setup_logger() -> logging.Logger:
   logger = logging.getLogger('main')
