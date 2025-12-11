@@ -9,7 +9,7 @@ import copy
 from datetime import datetime, timezone
 from collections import deque
 
-DMAZE_ENDPOINT = 'https://api.dmaze.com/'
+DMAZE_ENDPOINT = 'https://api.dmaze.com'
 IDS = deque()
 HEADERS_GET = {
   'Accept': 'application/json',
